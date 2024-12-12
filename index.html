@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Include GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <!-- Include ScrollTrigger for GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Video Element for Three.js Background -->
+    <video id="video-background" muted autoplay loop style="display: none;">
+        <source src="vid/Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- 3D Canvas for Three.js Animation -->
+    <div id="hero-canvas"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">Neon</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#profile" id="profile-btn">Profile</a></li>
+                <li>
+                    <!-- Link to Cart Page -->
+                    <a href="cart.html" id="cart-btn">Cart (<span id="cart-count">0</span>)</a>
+                </li>
+                <li>
+                    <!-- Search Bar -->
+                    <input type="text" id="search-bar" placeholder="Search for products...">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="search-results" class="search-results"></div>
+    <header class="hero-section">
+        <div class="overlay"></div>
+        <h1>Revolutionizing the Future of Shopping</h1>
+        <p>Experience the next level of online shopping with our futuristic products.</p>
+        <a href="#products" class="cta-button">Shop Now</a>
+    </header>
+
+    <main>
+        <section id="products" class="products-section">
+            <h2>Featured Products</h2>
+            <div class="product-carousel">
+                <div class="product-card">
+                    <img src="img/product1.jpg" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>$49.99</p>
+                    <button data-product-id="Product 1">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/product2.jpg" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>$89.99</p>
+                    <button data-product-id="Product 2">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/product3.jpg" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>$29.99</p>
+                    <button data-product-id="Product 3">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>Why Choose Us?</h2>
+            <p>We bring cutting-edge technology and design to redefine your shopping experience.</p>
+        </section>
+
+        <section id="services" class="services-section">
+            <h2>Our Services</h2>
+            <p>Explore a wide range of innovative products tailored for your needs.</p>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <p>&copy; 2024 Futuristic E-Commerce. All rights reserved.</p>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <p id="total-price">Total: $0.00</p>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-profile">&times;</span>
+            <h2>Your Profile</h2>
+            <p>Profile details will be shown here.</p>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="cart.js"></script>
+    <script src="three-setup.js"></script>
+    <script src="gsap-animations.js"></script>
+</body>
+</html>

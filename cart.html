@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="cart.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <button id="checkout-btn" onclick="window.location.href='card.html'">Checkout</button>
+    </header>
+    <main>
+        <ul id="cart-items"></ul>
+        <div id="summary">
+            <p id="total-price">Total: $0.00</p>
+            <p id="taxes">Taxes (8.85%): $0.00</p>
+            <p id="grand-total">Grand Total: $0.00</p>
+        </div>
+    </main>
+    <script type="module" src="cart.js"></script>
+    <script type="module" src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
